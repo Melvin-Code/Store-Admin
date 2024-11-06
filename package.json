@@ -2,9 +2,13 @@
   "name": "admin-store",
   "version": "1.0.0",
   "main": "index.js",
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.gql"
+  ],
   "scripts": {
     "compile": "tsc",
-    "start": "npm run compile && node ./dist/index.js"
+    "start": "npm run compile && nodemon ./dist/index.js"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +17,12 @@
   "type": "module",
   "dependencies": {
     "@apollo/server": "^4.11.2",
-    "graphql": "^16.9.0"
+    "express": "^4.21.1",
+    "graphql": "^16.9.0",
+    "graphql-tag": "^2.12.6",
+    "pg": "^8.13.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.5"
   },
   "devDependencies": {
     "@types/node": "^22.9.0",
